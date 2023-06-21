@@ -1,4 +1,4 @@
-const users = [
+const userss = [
     {
         name: "Kanat",
         pin: '523478',
@@ -11,3 +11,5 @@ const users = [
 
     }
 ]
+localStorage.setItem('userss', JSON.stringify(userss));
+
