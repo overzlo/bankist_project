@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="login">
+        <h2>Login</h2>
+
+        <input type="text" placeholder="Enter your login" name="login" value="Kanat">
+        <input type="password" placeholder="Enter PIN-code" name="login" value="523478">
+        <button onclick="enter()">LOGIN</button>
+
+    </section>
+
+    <section>
+        <h1>Main</h1>
+        <div class="username">User
+            
+        </div>
+
+        <div class="balance">
+            
+        </div>
+        <div class="trasfer"> 
+            <input type="text" placeholder="Transfer to" name="transfer" value="Alexey">
+            <input type="number" placeholder="amount" name="transfer">
+            <button onclick="transfer()">Transfer</button>
+        </div>
+
+        <div class="loan">
+            <input type="number" placeholder="amount" name="loan">
+            <button onclick="loan()">Loan</button>
+        </div>
+        <div class="Close account">
+            <input type="text" placeholder="username" name="close">
+            <input type="password" placeholder="pin" name="close">
+            <button onclick="close()">CLOSE</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="local_data.js"></script>
+</body>
+</html>
