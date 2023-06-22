@@ -16,43 +16,51 @@
 
     </section>
 
-    <section class="system">
-        <h1>Main</h1>
-        <div class="username">User
-            
-        </div>
+    <section class="system ">
 
-        <div class="logout">
-            <button onclick="logOUT()">exit</button>
-        </div>
+        <div class="system_left">
+            <div class="username">User
+                    
+            </div>
 
-        <div class="balance">
-            Balance
-        </div>
-        <div class="trasfer"> 
-            <input type="text" placeholder="Transfer to" name="transfer" value="Alexey">
-            <input type="number" placeholder="amount" name="transfer">
-            <button onclick="transfer()">Transfer</button>
-        </div>
+        
 
-        <div class="loan">
-            <input type="number" placeholder="amount" name="loan">
-            <button onclick="loan()">Loan</button>
-        </div>
-        <div class="Close account">
-            <input type="text" placeholder="username" name="close" value="Kanat">
-            <input type="password" placeholder="pin" name="close" value="523478">
-            <button onclick="deleteAcc()">CLOSE</button>
-        </div>
+            <div class="balance">
+                Balance
+            </div>
+            <div class="transfer"> 
+                <input type="text" placeholder="Transfer to" name="transfer" value="Alexey">
+                <input type="number" placeholder="amount" name="transfer">
+                <button onclick="transfer()">Transfer</button>
+            </div>
 
-        <div onscroll="info()" class="info">
-                <h2>2</h2>
-                <h2>2</h2>
-                <h2>2</h2>
-                <h2>2</h2>
-                <h2>2</h2>
-                <h2>2</h2>
-    </div>
+            <div class="loan">
+                <input type="number" placeholder="amount" name="loan">
+                <button onclick="loan()">Loan</button>
+            </div>
+            <div class="Close account">
+                <input type="text" placeholder="username" name="close" value="Kanat">
+                <input type="password" placeholder="pin" name="close" value="523478">
+                <button onclick="deleteAcc()">CLOSE</button>
+            </div>
+            <div class="logout">
+                <button onclick="logOUT()">exit</button>
+            </div>
+        </div>
+        <div class="system_right">
+                <div onscroll="info()" class="info">
+                        <h2>2</h2>
+                        <h2>2</h2>
+                        <h2>2</h2>
+                        <h2>2</h2>
+                        <h2>2</h2>
+                        <h2>2</h2>
+                </div>
+                <button onclick="sortByIncome()">IN</button>
+                <button onclick="sortByOutcome()">OUT</button>
+
+                <button onclick="clearAll()">CLEAR</button>
+        </div>
     </section>
 
     <script src="script.js"></script>

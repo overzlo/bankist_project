@@ -1,10 +1,62 @@
 .hidden {
     display: none !important;
 }
-
-.info{
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     width: 500px;
     height: 200px;
-    overflow: scroll;
 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: auto;
 }
+.login h2{
+    text-align: center;
+}
+
+.system{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: auto;
+}
+
+.username, .balance{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.loan{
+    display: flex;
+    justify-content: space-between;
+}
+input, button{
+    width: 200px;
+    height: 20px;
+    margin-right: 10px;
+}
+.logout{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 200px;
+}
+.info{
+    width: 630px;
+    height: 300px;
+    overflow: scroll;
+}
+
+.income{
+    display: flex;
+    flex-direction: row;
+}
+
