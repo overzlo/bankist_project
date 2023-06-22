@@ -11,6 +11,13 @@ const system = $(".system")
 
 let arrS = [];
 let arrO = [];
+int();
+let interval 
+function int(){
+   interval = setInterval(() => logOUT(), 60000); 
+}
+
+
 function enter(){
     const logForm = $(".login")
 
@@ -63,6 +70,8 @@ function transfer(){
     }   
 
     localStorage.setItem('userss', JSON.stringify(users));
+  clearInterval()
+
 }
 console.log(arrS);
 function loan(){
@@ -125,3 +134,6 @@ function sortByOutcome(){
       
     }
 }
+
+
+

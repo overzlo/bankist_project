@@ -60,3 +60,6 @@ input, button{
     flex-direction: row;
 }
 
+.timer h3{
+ text-align: center;
+}
