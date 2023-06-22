@@ -3,15 +3,19 @@ const $ = document.querySelector.bind(document);
 
 const login = document.getElementsByName("login");
 let users = JSON.parse(localStorage.getItem('userss')) || [];
-
-
+const info = $(".info")
+info.innerHTML = ''
+let balance = $(".balance");
+const logForm = $(".login")
+const system = $(".system")
 function enter(){
     const logForm = $(".login")
 
 
        for(let i = 0; i < users.length; i ++){
         if(users[i].name == login[0].value && users[i].pin == login[1].value){
-            // logForm.classList.add("hidden")
+            logForm.classList.add("hidden")
+            system.classList.remove('hidden')
             console.log("true")
             userName(login[0].value, login[1].value);
 
@@ -23,14 +27,12 @@ function enter(){
 
 function userName(name, password){
     const userinfo = $(".username");
-    userinfo.insertAdjacentHTML("beforeend", `<h4> ${name}  ${password} </h4>`)
-
+    userinfo.innerHTML = `${name} ${password}`
     let balance = $(".balance");
-    balance.innerHTML = '';
     for(let i = 0; i < users.length;i++){
         if(name == users[i].name && password == users[i].pin ){
-            balance.insertAdjacentHTML("beforeend", `<h4>${users[i].balance}</h4>`)
-    }
+            balance.innerHTML = `Current balance: ${users[i].balance}`;
+        }   
 
 }
 }
@@ -42,7 +44,16 @@ function transfer(){
     for(let i = 0; i < users.length; i ++ ){
         if(transferUserName == users[i].name && login[0] != transferUserName){
             users[i].balance += transferUserAmount;
-           console.log(users[i].balance);
+            
+            info.insertAdjacentHTML("beforeend", `<h4>Transfer to ${transferUserName}.  Amount of transfer: ${transferUserAmount}</h4>`)
+        }
+
+        for(let i = 0; i < users.length; i++){
+            if(users[i].name == login[0].value && users[i].pin == login[1].value){
+                users[i].balance -= transferUserAmount;
+                balance.innerHTML = `Current balance: ${users[i].balance}`;
+
+            }
         }
     }   
 
@@ -57,9 +68,10 @@ function loan(){
         if(users[i].name == login[0].value && users[i].pin == login[1].value){
             users[i].balance +=loanAmount;
             console.log(users[i].balance);
+            info.insertAdjacentHTML("beforeend", `<h4>Loan ${Number(loan[0].value)}</h4>`)
+            balance.innerHTML = `Current balance: ${users[i].balance}`;
 
         }
-        console.log(users[i]);
     }
     localStorage.setItem('userss', JSON.stringify(users));
 }
@@ -79,4 +91,8 @@ function deleteAcc(){
     localStorage.setItem('userss', JSON.stringify(users));
 }
 
-    
+function logOUT(){
+    const system = $(".system")
+    system.classList.add('hidden')
+    logForm.classList.remove('hidden')
+}
